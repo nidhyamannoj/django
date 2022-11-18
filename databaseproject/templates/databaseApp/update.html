@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <title>Document</title>
+    {%load static%}
+    <link rel="stylesheet" href="{% static 'css/updatestyle.css'%}"> -->
+</head>
+<body>
+    <div style="text-align: center;border: 1px black;"class="container">
+      <h1>Update student details</h1>
+        <form  method="POST">
+          SNO:
+          <input type="text" name="sno" value={{student.sno}}><br><br>
+          Sname:
+          <input type="text" name="sname"value={{student.sname}}><br><br>
+          Saddress:
+          <input type="text" name="saddress" value={{student.saddress}}>
+          <br><br>
+            {%csrf_token%}
+          <input type="submit" value="Update record">
+        </form>
+    </div>
+</body>
+
+</html>
